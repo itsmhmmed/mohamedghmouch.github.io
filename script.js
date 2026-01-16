@@ -30,7 +30,7 @@ function erase() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    if(roles.length) setTimeout(type, newTextDelay + 250);
+    if(roles.length && typingElement) setTimeout(type, newTextDelay + 250);
 });
 
 // 2. Scroll Animation (Fade In)
