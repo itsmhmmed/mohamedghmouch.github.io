@@ -1,6 +1,6 @@
-/* Color Variables based on your palette */
+/* Color Variables */
 :root {
-    --bg-dark: #050a1f; /* Darker version of 0E21A0 for background */
+    --bg-dark: #050a1f; 
     --primary: #0E21A0;
     --secondary: #4D2FB2;
     --accent-1: #B153D7;
@@ -33,7 +33,7 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(14, 33, 160, 0.8); /* Primary color with opacity */
+    background: rgba(14, 33, 160, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
@@ -188,14 +188,14 @@ body {
 }
 
 .skill-tag {
-    background: rgba(77, 47, 178, 0.3); /* Secondary color low opacity */
+    background: rgba(77, 47, 178, 0.3);
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.9rem;
     border: 1px solid var(--secondary);
 }
 
-/* Socials */
+/* Socials (UPDATED) */
 .contact-card {
     text-align: center;
     max-width: 600px;
@@ -203,20 +203,38 @@ body {
 }
 
 .socials {
-    margin-top: 1.5rem;
-    font-size: 2rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.socials a {
+/* NEW: Button Style for Links */
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--secondary);
+    border-radius: 50px;
     color: var(--text-light);
-    transition: color 0.3s;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 101;
 }
 
-.socials a:hover {
-    color: var(--accent-2);
+.social-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(14, 33, 160, 0.4);
+}
+
+.social-btn i {
+    font-size: 1.3rem;
 }
 
 /* Animation Classes */
@@ -242,5 +260,5 @@ footer {
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
     .grid { grid-template-columns: 1fr; }
-    .nav-links { display: none; } /* Simplified for mobile */
+    .nav-links { display: none; }
 }
